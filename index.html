@@ -3,80 +3,192 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hôtel UP | Lille Centre Gares</title>
+    <meta name="description" content="Hôtel UP - Hôtel de luxe 5 étoiles au cœur de Lille. Chambres élégantes, emplacement privilégié près des gares, confort moderne et service premium.">
+    <meta name="keywords" content="hôtel lille, hotel luxe lille, hôtel 5 étoiles lille, hotel centre lille, booking hotel lille">
+    <title>Hôtel UP | Luxe & Élégance au Cœur de Lille</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="preloader-logo">HÔTEL <span style="color: var(--accent-gold);">UP</span></div>
+    </div>
+
+    <!-- Navigation -->
     <nav>
         <div class="nav-logo">Hôtel <span>UP</span></div>
+        <div class="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
         <div class="nav-links">
             <a href="index.html" class="active">Accueil</a>
             <a href="rooms.html">Chambres</a>
             <a href="contact.html">Contact & Accès</a>
+            <a href="https://www.booking.com/hotel/fr/up.html?aid=2402550&label=hotel-des-reignaux.fr" target="_blank" class="btn" style="padding: 12px 30px; font-size: 0.85rem;">Réserver</a>
         </div>
-        <a href="https://www.booking.com/hotel/fr/up.html?aid=2402550" target="_blank" class="btn" style="padding: 10px 20px; font-size: 0.8rem;">Réserver</a>
     </nav>
 
-    <header class="page-header home-hero">
-        <div class="hero-content">
-            <h1>Hôtel UP Lille</h1>
-            <p>Modernité et confort au cœur de la ville.</p>
-            <a href="https://www.booking.com/hotel/fr/up.html?aid=2402550" target="_blank" class="btn">Meilleurs Tarifs Garantis</a>
+    <!-- Hero Slider -->
+    <div class="hero-slider">
+        <div class="hero-slide active" style="background-image: url('images/hotel_exterior_hero_1769722574245.png');">
+            <div class="hero-content">
+                <h1>Hôtel UP Lille</h1>
+                <p>L'Excellence au Cœur de la Capitale des Flandres</p>
+                <a href="https://www.booking.com/hotel/fr/up.html?aid=2402550&label=hotel-des-reignaux.fr" target="_blank" class="btn">Réserver Maintenant</a>
+            </div>
         </div>
-    </header>
+        <div class="hero-slide" style="background-image: url('images/lobby_reception_1769722632008.png');">
+            <div class="hero-content">
+                <h1>Élégance & Raffinement</h1>
+                <p>Un Cadre Unique pour un Séjour Inoubliable</p>
+                <a href="rooms.html" class="btn">Découvrir Nos Chambres</a>
+            </div>
+        </div>
+        <div class="hero-slide" style="background-image: url('images/chambre_double_deluxe_1769722587438.png');">
+            <div class="hero-content">
+                <h1>Confort Premium</h1>
+                <p>Des Chambres Pensées pour Votre Bien-Être</p>
+                <a href="https://www.booking.com/hotel/fr/up.html?aid=2402550&label=hotel-des-reignaux.fr" target="_blank" class="btn">Meilleurs Tarifs Garantis</a>
+            </div>
+        </div>
+        
+        <!-- Slider Dots -->
+        <div class="slider-dots">
+            <span class="slider-dot active"></span>
+            <span class="slider-dot"></span>
+            <span class="slider-dot"></span>
+        </div>
+    </div>
 
-    <section>
+    <!-- Section Bienvenue -->
+    <section class="fade-in">
         <div class="section-title-container">
-            <h2>L'Emplacement Idéal</h2>
+            <h2>Bienvenue à l'Hôtel UP</h2>
+            <p>Niché au cœur de Lille, l'Hôtel UP incarne le raffinement et l'hospitalité à la française. Notre établissement 5 étoiles vous accueille dans un cadre à la fois moderne et chaleureux, où chaque détail a été pensé pour votre confort.</p>
         </div>
         <div class="grid-2">
-            <div class="text-block">
-                <p>Situé en plein centre de Lille, l'Hôtel UP vous accueille dans un cadre moderne et design. Nous sommes situés à seulement 200 mètres de la gare Lille-Flandres et à proximité immédiate de l'Opéra et du quartier commerçant d'Euralille.</p>
-                <p>Que ce soit pour un voyage d'affaires ou un week-end découverte, profitez de notre emplacement privilégié pour explorer la capitale des Flandres à pied.</p>
+            <div>
+                <h3>Un Emplacement Privilégié</h3>
+                <p>Situé à seulement 200 mètres de la gare Lille-Flandres et à proximité immédiate du Vieux-Lille, notre hôtel est le point de départ idéal pour explorer les trésors de la capitale des Flandres.</p>
+                <p>Que vous soyez en voyage d'affaires ou en escapade romantique, profitez d'un accès direct aux attractions culturelles, aux boutiques de luxe et aux restaurants gastronomiques qui font la renommée de Lille.</p>
                 <br>
-                <a href="contact.html" style="color: var(--accent-color); font-weight: bold; border-bottom: 2px solid;">Voir la localisation exacte →</a>
+                <a href="contact.html" class="btn btn-outline">Voir Notre Localisation</a>
             </div>
             <div>
-                <img src="https://images.unsplash.com/photo-1533632216130-a5f893c00759?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" alt="Lille Centre" class="rounded-shadow">
+                <img src="https://images.unsplash.com/photo-1533632216130-a5f893c00759?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" alt="Lille Centre" class="gallery-image" style="height: 500px;">
             </div>
         </div>
     </section>
 
+    <!-- Section Services Premium -->
     <div class="bg-light">
-        <div class="content-wrapper" style="text-align: center;">
-             <div class="section-title-container">
-                <h2>Vos Avantages</h2>
+        <section class="fade-in">
+            <div class="section-title-container">
+                <h2>Nos Services Premium</h2>
             </div>
-             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px;">
-                 <div>
-                     <h3 style="font-size: 1.2rem; margin-bottom: 10px;">📍 Centre-Ville</h3>
-                     <p>À deux pas des gares TGV et du Vieux-Lille.</p>
-                 </div>
-                 <div>
-                    <h3 style="font-size: 1.2rem; margin-bottom: 10px;">🥐 Petit-déjeuner</h3>
-                    <p>Un buffet varié servi tous les matins pour bien démarrer la journée.</p>
+            <div class="grid-4">
+                <div class="card">
+                    <div class="card-content">
+                        <h3 style="text-align: center; font-size: 2.5rem; margin-bottom: 20px;">📍</h3>
+                        <h3 style="text-align: center;">Emplacement Idéal</h3>
+                        <p style="text-align: center;">À deux pas des gares TGV et du cœur historique de Lille</p>
+                    </div>
                 </div>
-                <div>
-                    <h3 style="font-size: 1.2rem; margin-bottom: 10px;">📶 Wi-Fi Gratuit</h3>
-                    <p>Connexion haut débit disponible dans tout l'établissement.</p>
+                <div class="card">
+                    <div class="card-content">
+                        <h3 style="text-align: center; font-size: 2.5rem; margin-bottom: 20px;">🛎️</h3>
+                        <h3 style="text-align: center;">Conciergerie 24/7</h3>
+                        <p style="text-align: center;">Notre équipe dédiée à votre service jour et nuit</p>
+                    </div>
                 </div>
-                <div>
-                    <h3 style="font-size: 1.2rem; margin-bottom: 10px;">🛎️ Réception 24h/24</h3>
-                    <p>Notre équipe est à votre disposition à toute heure.</p>
+                <div class="card">
+                    <div class="card-content">
+                        <h3 style="text-align: center; font-size: 2.5rem; margin-bottom: 20px;">🥐</h3>
+                        <h3 style="text-align: center;">Petit-Déjeuner Gourmet</h3>
+                        <p style="text-align: center;">Buffet premium avec produits locaux et pâtisseries maison</p>
+                    </div>
                 </div>
-             </div>
-        </div>
+                <div class="card">
+                    <div class="card-content">
+                        <h3 style="text-align: center; font-size: 2.5rem; margin-bottom: 20px;">📶</h3>
+                        <h3 style="text-align: center;">Wi-Fi Haute Vitesse</h3>
+                        <p style="text-align: center;">Connexion fibre gratuite dans tout l'établissement</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <h3 style="text-align: center; font-size: 2.5rem; margin-bottom: 20px;">🚗</h3>
+                        <h3 style="text-align: center;">Parking Sécurisé</h3>
+                        <p style="text-align: center;">Parking privé avec service voiturier disponible</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <h3 style="text-align: center; font-size: 2.5rem; margin-bottom: 20px;">🏋️</h3>
+                        <h3 style="text-align: center;">Salle de Fitness</h3>
+                        <p style="text-align: center;">Équipements modernes accessibles 24h/24</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <h3 style="text-align: center; font-size: 2.5rem; margin-bottom: 20px;">💼</h3>
+                        <h3 style="text-align: center;">Business Center</h3>
+                        <p style="text-align: center;">Salles de réunion équipées et espace de travail</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <h3 style="text-align: center; font-size: 2.5rem; margin-bottom: 20px;">🌟</h3>
+                        <h3 style="text-align: center;">Service d'Excellence</h3>
+                        <p style="text-align: center;">Un service personnalisé pour chaque client</p>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
 
+    <!-- Galerie d'Images -->
+    <section class="fade-in">
+        <div class="section-title-container">
+            <h2>Découvrez l'Hôtel UP</h2>
+        </div>
+        <div class="gallery">
+            <img src="images/chambre_double_deluxe_1769722587438.png" alt="Chambre Double Deluxe" class="gallery-image">
+            <img src="images/chambre_twin_modern_1769722600567.png" alt="Chambre Twin Moderne" class="gallery-image">
+            <img src="images/bathroom_luxury_1769722613947.png" alt="Salle de Bain Luxe" class="gallery-image">
+            <img src="images/lobby_reception_1769722632008.png" alt="Lobby & Réception" class="gallery-image">
+            <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" alt="Restaurant" class="gallery-image">
+            <img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" alt="Détails" class="gallery-image">
+        </div>
+    </section>
+
+    <!-- Section Call to Action -->
+    <div class="bg-dark">
+        <section style="text-align: center;">
+            <h2 style="color: white;">Réservez Votre Séjour d'Exception</h2>
+            <p style="max-width: 800px; margin: 0 auto 40px; font-size: 1.2rem; color: rgba(255,255,255,0.9);">
+                Profitez de nos meilleurs tarifs en réservant directement sur Booking.com. 
+                Notre équipe vous attend pour vous offrir une expérience inoubliable au cœur de Lille.
+            </p>
+            <a href="https://www.booking.com/hotel/fr/up.html?aid=2402550&label=hotel-des-reignaux.fr" target="_blank" class="btn">Réserver sur Booking.com</a>
+        </section>
+    </div>
+
+    <!-- Footer -->
     <footer>
         <h3>Hôtel UP Lille</h3>
-        <p>Centre Gares</p>
+        <p>L'Élégance au Cœur de la Capitale des Flandres</p>
+        <p style="margin-top: 10px;">📍 Centre Gares - 200m de Lille-Flandres</p>
         <br>
-        <a href="https://www.booking.com/hotel/fr/up.html?aid=2402550" target="_blank" class="btn">Réserver Votre Séjour</a>
-        <br><br>
-        <p style="font-size: 0.8rem;">&copy; 2024 Hôtel UP. Site vitrine non officiel.</p>
+        <a href="https://www.booking.com/hotel/fr/up.html?aid=2402550&label=hotel-des-reignaux.fr" target="_blank" class="btn">Meilleurs Tarifs Garantis</a>
+        <br><br><br>
+        <p style="font-size: 0.85rem; opacity: 0.7;">&copy; 2024 Hôtel UP. Site vitrine - Tous droits réservés.</p>
     </footer>
+
+    <script src="script.js"></script>
 
 </body>
 </html>

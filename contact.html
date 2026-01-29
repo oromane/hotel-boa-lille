@@ -1,67 +1,287 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Contactez l'Hôtel UP Lille. Adresse, téléphone, plan d'accès et formulaire de contact. Situé à 200m de la gare Lille-Flandres.">
     <title>Contact & Accès | Hôtel UP Lille</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        /* Petit style juste pour la liste de localisation */
-        .location-list li { margin-bottom: 15px; list-style: none; display: flex; align-items: center; }
-        .location-list li strong { min-width: 180px; display: inline-block; color: var(--primary-color); }
+        .contact-info-card {
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: var(--shadow-md);
+            text-align: center;
+            transition: var(--transition-smooth);
+        }
+
+        .contact-info-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .contact-info-card h3 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        .contact-form {
+            background: var(--bg-cream);
+            padding: 50px;
+            border-radius: 8px;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--primary-dark);
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid transparent;
+            border-radius: 4px;
+            font-family: var(--font-body);
+            font-size: 1rem;
+            transition: var(--transition-fast);
+            background: white;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--accent-gold);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 150px;
+        }
+
+        .map-container {
+            width: 100%;
+            height: 450px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        .location-list {
+            list-style: none;
+        }
+
+        .location-list li {
+            margin-bottom: 20px;
+            padding-left: 30px;
+            position: relative;
+            color: var(--text-gray);
+        }
+
+        .location-list li::before {
+            content: "📍";
+            position: absolute;
+            left: 0;
+            font-size: 1.2rem;
+        }
+
+        .location-list li strong {
+            color: var(--primary-dark);
+            display: block;
+            margin-bottom: 5px;
+        }
     </style>
 </head>
+
 <body>
 
+    <!-- Navigation -->
     <nav>
         <div class="nav-logo">Hôtel <span>UP</span></div>
+        <div class="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
         <div class="nav-links">
             <a href="index.html">Accueil</a>
             <a href="rooms.html">Chambres</a>
             <a href="contact.html" class="active">Contact & Accès</a>
+            <a href="https://www.booking.com/hotel/fr/up.html?aid=2402550&label=hotel-des-reignaux.fr" target="_blank"
+                class="btn" style="padding: 12px 30px; font-size: 0.85rem;">Réserver</a>
         </div>
-        <a href="https://www.booking.com/hotel/fr/up.html?aid=2402550" target="_blank" class="btn" style="padding: 10px 20px; font-size: 0.8rem;">Réserver</a>
     </nav>
 
-    <header class="page-header" style="background-image: url('https://images.unsplash.com/photo-1474899632751-0379733ac07a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80'); height: 40vh;">
-        <h1>Nous Trouver</h1>
+    <!-- Page Header -->
+    <header class="page-header" style="background-image: url('images/lobby_reception_1769722632008.png');">
+        <h1>Contact & Accès</h1>
     </header>
 
-    <section>
-        <div class="grid-2" style="align-items: flex-start;">
-            <div>
-                <h2>Localisation</h2>
-                <p>L'Hôtel UP bénéficie d'une situation exceptionnelle au cœur de Lille, rendant tous les points d'intérêt accessibles très facilement.</p>
-                <br>
-                <ul class="location-list">
-                    <li><strong>Gare Lille-Flandres :</strong> 200 mètres (2 min à pied)</li>
-                    <li><strong>Opéra de Lille :</strong> 350 mètres</li>
-                    <li><strong>Centre commercial Euralille :</strong> 400 mètres</li>
-                    <li><strong>Gare Lille-Europe (TGV) :</strong> 650 mètres (8 min à pied)</li>
-                    <li><strong>Grand Place :</strong> 5 minutes à pied</li>
-                    <li><strong>Lille Grand Palais :</strong> 1,2 km</li>
-                </ul>
-
-                <div style="margin-top: 40px; padding: 20px; background: var(--bg-light); border-left: 4px solid var(--accent-color);">
-                    <h3 style="margin-bottom: 10px; font-size: 1.1rem;">Informations Pratiques</h3>
-                    <p><strong>Réception :</strong> Ouverte 24h/24</p>
-                    <p><strong>Arrivée (Check-in) :</strong> À partir de 15h00</p>
-                    <p><strong>Départ (Check-out) :</strong> Jusqu'à 12h00</p>
-                </div>
+    <!-- Contact Cards -->
+    <section class="fade-in">
+        <div class="section-title-container">
+            <h2>Contactez-Nous</h2>
+            <p>Notre équipe est à votre disposition pour répondre à toutes vos questions</p>
+        </div>
+        <div class="grid-3">
+            <div class="contact-info-card">
+                <h3>📞</h3>
+                <h4>Téléphone</h4>
+                <p style="color: var(--text-gray); margin-top: 10px;">Réception 24h/24</p>
+                <a href="tel:+33320123456" style="color: var(--accent-gold); font-weight: 600; font-size: 1.1rem;">+33 3
+                    20 12 34 56</a>
             </div>
-            <div>
-                <a href="https://www.google.com/maps/search/?api=1&query=Hôtel+UP+Lille+Centre+Gares" target="_blank">
-                    <img src="https://images.unsplash.com/photo-1569336415962-a4bd9f69cd83?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" alt="Carte de Lille" class="rounded-shadow" style="cursor: pointer;">
-                    <p style="text-align: center; margin-top: 10px; font-size: 0.9rem; color: var(--accent-color);">Cliquez pour ouvrir dans Google Maps</p>
-                </a>
+            <div class="contact-info-card">
+                <h3>✉️</h3>
+                <h4>Email</h4>
+                <p style="color: var(--text-gray); margin-top: 10px;">Réponse sous 24h</p>
+                <a href="mailto:contact@hotelup-lille.fr"
+                    style="color: var(--accent-gold); font-weight: 600; font-size: 1.1rem;">contact@hotelup-lille.fr</a>
+            </div>
+            <div class="contact-info-card">
+                <h3>📍</h3>
+                <h4>Adresse</h4>
+                <p style="color: var(--text-gray); margin-top: 10px;">Centre Gares</p>
+                <p style="color: var(--primary-dark); font-weight: 600;">Lille, France</p>
             </div>
         </div>
     </section>
 
+    <!-- Map & Location Details -->
+    <div class="bg-light">
+        <section class="fade-in">
+            <div class="section-title-container">
+                <h2>Notre Emplacement</h2>
+                <p>Au cœur de Lille, à proximité de tout</p>
+            </div>
+            <div class="grid-2" style="align-items: flex-start;">
+                <div>
+                    <h3>Comment Nous Trouver ?</h3>
+                    <p style="margin-bottom: 30px;">
+                        L'Hôtel UP bénéficie d'une situation exceptionnelle au cœur de Lille,
+                        rendant tous les points d'intérêt accessibles très facilement.
+                    </p>
+
+                    <ul class="location-list">
+                        <li>
+                            <strong>Gare Lille-Flandres</strong>
+                            200 mètres - 2 minutes à pied
+                        </li>
+                        <li>
+                            <strong>Opéra de Lille</strong>
+                            350 mètres - 4 minutes à pied
+                        </li>
+                        <li>
+                            <strong>Centre Commercial Euralille</strong>
+                            400 mètres - 5 minutes à pied
+                        </li>
+                        <li>
+                            <strong>Gare Lille-Europe (TGV)</strong>
+                            650 mètres - 8 minutes à pied
+                        </li>
+                        <li>
+                            <strong>Grand Place</strong>
+                            600 mètres - 7 minutes à pied
+                        </li>
+                        <li>
+                            <strong>Vieux-Lille</strong>
+                            800 mètres - 10 minutes à pied
+                        </li>
+                    </ul>
+
+                    <div
+                        style="margin-top: 40px; padding: 30px; background: white; border-radius: 8px; border-left: 4px solid var(--accent-gold);">
+                        <h4 style="margin-bottom: 15px; color: var(--primary-dark);">Informations Pratiques</h4>
+                        <p><strong>Réception :</strong> Ouverte 24h/24</p>
+                        <p><strong>Arrivée (Check-in) :</strong> À partir de 15h00</p>
+                        <p><strong>Départ (Check-out) :</strong> Jusqu'à 12h00</p>
+                        <p><strong>Parking :</strong> Disponible sur demande (supplément)</p>
+                    </div>
+                </div>
+                <div>
+                    <div class="map-container">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2530.5179!2d3.0747!3d50.6367!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c2d579b3256e11%3A0x40af13e816411030!2sGare%20Lille%20Flandres!5e0!3m2!1sfr!2sfr!4v1234567890"
+                            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                    <p style="text-align: center; margin-top: 15px; color: var(--text-gray); font-size: 0.9rem;">
+                        Carte interactive - Cliquez pour naviguer
+                    </p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Contact Form -->
+    <section class="fade-in">
+        <div class="section-title-container">
+            <h2>Envoyez-Nous un Message</h2>
+            <p>Une question ? Une demande spéciale ? Notre équipe vous répond rapidement</p>
+        </div>
+        <div style="max-width: 800px; margin: 0 auto;">
+            <form class="contact-form">
+                <div class="form-group">
+                    <label for="name">Nom Complet *</label>
+                    <input type="text" id="name" name="name" required placeholder="Votre nom">
+                </div>
+                <div class="form-group">
+                    <label for="email">Adresse Email *</label>
+                    <input type="email" id="email" name="email" required placeholder="votre@email.com">
+                </div>
+                <div class="form-group">
+                    <label for="phone">Téléphone</label>
+                    <input type="tel" id="phone" name="phone" placeholder="+33 6 12 34 56 78">
+                </div>
+                <div class="form-group">
+                    <label for="message">Votre Message *</label>
+                    <textarea id="message" name="message" required placeholder="Décrivez votre demande..."></textarea>
+                </div>
+                <button type="submit" class="btn" style="width: 100%;">Envoyer le Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <div class="bg-dark">
+        <section style="text-align: center;">
+            <h2 style="color: white;">Préférez Réserver Directement ?</h2>
+            <p style="max-width: 700px; margin: 0 auto 40px; font-size: 1.1rem; color: rgba(255,255,255,0.9);">
+                Consultez nos disponibilités et réservez en quelques clics sur Booking.com
+            </p>
+            <a href="https://www.booking.com/hotel/fr/up.html?aid=2402550&label=hotel-des-reignaux.fr" target="_blank"
+                class="btn">Réserver sur Booking.com</a>
+        </section>
+    </div>
+
+    <!-- Footer -->
     <footer>
         <h3>Hôtel UP Lille</h3>
-        <p>Centre Gares</p>
+        <p>L'Élégance au Cœur de la Capitale des Flandres</p>
+        <p style="margin-top: 10px;">📍 Centre Gares - 200m de Lille-Flandres</p>
+        <br>
+        <p style="font-size: 0.9rem; margin-top: 20px;">
+            📞 +33 3 20 12 34 56 | ✉️ contact@hotelup-lille.fr
+        </p>
     </footer>
 
+    <script src="script.js"></script>
+
 </body>
+
 </html>
