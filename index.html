@@ -1,230 +1,81 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Boa Hotel - BW Signature Collection | Lille Centre</title>
-    <style>
-        /* --- CSS VARIABLES & RESET --- */
-        :root {
-            --primary-color: #1a1a1a; /* Dark Elegant Grey */
-            --accent-color: #d4af37; /* Gold for Luxury */
-            --bg-light: #f9f9f9;
-            --text-color: #4a4a4a;
-        }
-
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        
-        body {
-            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-            color: var(--text-color);
-            line-height: 1.6;
-            background-color: #fff;
-        }
-
-        /* --- TYPOGRAPHY --- */
-        h1, h2, h3 { color: var(--primary-color); font-weight: 300; text-transform: uppercase; letter-spacing: 2px; }
-        h2 { margin-bottom: 20px; text-align: center; border-bottom: 2px solid var(--accent-color); display: inline-block; padding-bottom: 10px; }
-        .section-title-container { text-align: center; margin-bottom: 40px; }
-
-        /* --- HEADER / HERO --- */
-        header {
-            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
-            background-size: cover;
-            background-position: center;
-            height: 90vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            color: white;
-            text-align: center;
-            padding: 20px;
-        }
-
-        header h1 { font-size: 3rem; margin-bottom: 10px; border: none; letter-spacing: 5px; }
-        header p { font-size: 1.2rem; margin-bottom: 30px; font-weight: 300; }
-        
-        .btn {
-            background-color: var(--accent-color);
-            color: white;
-            padding: 15px 30px;
-            text-decoration: none;
-            text-transform: uppercase;
-            font-size: 0.9rem;
-            letter-spacing: 1px;
-            transition: background 0.3s;
-        }
-        .btn:hover { background-color: #b5952f; }
-
-        /* --- SECTIONS GENERAL --- */
-        section { padding: 60px 20px; max-width: 1100px; margin: 0 auto; }
-        .bg-light { background-color: var(--bg-light); max-width: 100%; }
-        .bg-light .content-wrapper { max-width: 1100px; margin: 0 auto; padding: 60px 20px; }
-
-        /* --- ABOUT & ROOMS --- */
-        .grid-2 {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-            align-items: center;
-        }
-
-        .text-block p { margin-bottom: 15px; }
-        .highlight-box {
-            background: white;
-            padding: 20px;
-            border-left: 4px solid var(--accent-color);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            margin-top: 20px;
-        }
-
-        .rating-badge {
-            display: inline-block;
-            background: var(--primary-color);
-            color: white;
-            padding: 5px 10px;
-            font-weight: bold;
-            border-radius: 4px;
-        }
-
-        img.rounded { border-radius: 4px; width: 100%; height: auto; box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
-
-        /* --- FACILITIES --- */
-        .facilities-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-            gap: 15px;
-            margin-top: 30px;
-        }
-        .facility-item {
-            background: white;
-            padding: 15px;
-            text-align: center;
-            border: 1px solid #eee;
-            color: var(--primary-color);
-            font-size: 0.9rem;
-        }
-
-        /* --- LOCATION --- */
-        .location-list li { margin-bottom: 10px; list-style: none; }
-        .location-list li::before { content: "📍 "; }
-
-        /* --- FOOTER --- */
-        footer {
-            background-color: var(--primary-color);
-            color: white;
-            text-align: center;
-            padding: 40px 20px;
-            margin-top: 40px;
-        }
-        footer p { opacity: 0.7; font-size: 0.9rem; }
-
-        /* --- MOBILE --- */
-        @media (max-width: 768px) {
-            .grid-2 { grid-template-columns: 1fr; }
-            header h1 { font-size: 2rem; }
-        }
-    </style>
+    <title>Hôtel UP | Lille Centre Gares</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header>
-        <h1>Boa Hotel</h1>
-        <p>BW Signature Collection - Lille Centre Gares</p>
-        <a href="#contact" class="btn">Book Your Stay</a>
+    <nav>
+        <div class="nav-logo">Hôtel <span>UP</span></div>
+        <div class="nav-links">
+            <a href="index.html" class="active">Accueil</a>
+            <a href="rooms.html">Chambres</a>
+            <a href="contact.html">Contact & Accès</a>
+        </div>
+        <a href="https://www.booking.com/hotel/fr/up.html?aid=2402550" target="_blank" class="btn" style="padding: 10px 20px; font-size: 0.8rem;">Réserver</a>
+    </nav>
+
+    <header class="page-header home-hero">
+        <div class="hero-content">
+            <h1>Hôtel UP Lille</h1>
+            <p>Modernité et confort au cœur de la ville.</p>
+            <a href="https://www.booking.com/hotel/fr/up.html?aid=2402550" target="_blank" class="btn">Meilleurs Tarifs Garantis</a>
+        </div>
     </header>
 
     <section>
         <div class="section-title-container">
-            <h2>Experience Luxury in Lille</h2>
+            <h2>L'Emplacement Idéal</h2>
         </div>
         <div class="grid-2">
             <div class="text-block">
-                <p>Located in central Lille, this design hotel is just 853 feet from Lille-Flandres Train Station and 2133 feet from Lille-Europe Train Station.</p>
-                <p>Ideally situated for travelers, Boa Hotel offers stylish guest rooms equipped with wide-screen LCD TVs and complimentary high-speed Wi-Fi access.</p>
-                <div class="highlight-box">
-                    <span class="rating-badge">8.9</span> <strong>Couples love our location.</strong>
-                    <p style="margin-top:5px; font-size:0.9em; margin-bottom: 0;">Rated highly for two-person trips.</p>
-                </div>
+                <p>Situé en plein centre de Lille, l'Hôtel UP vous accueille dans un cadre moderne et design. Nous sommes situés à seulement 200 mètres de la gare Lille-Flandres et à proximité immédiate de l'Opéra et du quartier commerçant d'Euralille.</p>
+                <p>Que ce soit pour un voyage d'affaires ou un week-end découverte, profitez de notre emplacement privilégié pour explorer la capitale des Flandres à pied.</p>
+                <br>
+                <a href="contact.html" style="color: var(--accent-color); font-weight: bold; border-bottom: 2px solid;">Voir la localisation exacte →</a>
             </div>
             <div>
-                <img src="https://images.unsplash.com/photo-1618773928121-c32242e63f39?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" alt="Hotel Interior" class="rounded">
+                <img src="https://images.unsplash.com/photo-1533632216130-a5f893c00759?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" alt="Lille Centre" class="rounded-shadow">
             </div>
         </div>
     </section>
 
     <div class="bg-light">
-        <div class="content-wrapper">
-            <div class="section-title-container">
-                <h2>Rooms & Dining</h2>
+        <div class="content-wrapper" style="text-align: center;">
+             <div class="section-title-container">
+                <h2>Vos Avantages</h2>
             </div>
-            <div class="grid-2">
+             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px;">
+                 <div>
+                     <h3 style="font-size: 1.2rem; margin-bottom: 10px;">📍 Centre-Ville</h3>
+                     <p>À deux pas des gares TGV et du Vieux-Lille.</p>
+                 </div>
+                 <div>
+                    <h3 style="font-size: 1.2rem; margin-bottom: 10px;">🥐 Petit-déjeuner</h3>
+                    <p>Un buffet varié servi tous les matins pour bien démarrer la journée.</p>
+                </div>
                 <div>
-                    <img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" alt="Luxury Room" class="rounded">
+                    <h3 style="font-size: 1.2rem; margin-bottom: 10px;">📶 Wi-Fi Gratuit</h3>
+                    <p>Connexion haut débit disponible dans tout l'établissement.</p>
                 </div>
-                <div class="text-block">
-                    <h3>Comfort & Style</h3>
-                    <p>The soundproofed guest rooms feature a queen-size bed and a work desk. The private bathrooms include bathrobes and <strong>L’Occitane amenities</strong>. All rooms are serviced by an elevator.</p>
-                    
-                    <h3 style="margin-top: 20px;">Dining</h3>
-                    <p>A buffet breakfast is served every morning. Guests can enjoy a drink in the hotel bar while reading the newspapers provided.</p>
+                <div>
+                    <h3 style="font-size: 1.2rem; margin-bottom: 10px;">🛎️ Réception 24h/24</h3>
+                    <p>Notre équipe est à votre disposition à toute heure.</p>
                 </div>
-            </div>
+             </div>
         </div>
     </div>
 
-    <section>
-        <div class="section-title-container">
-            <h2>Most Popular Facilities</h2>
-        </div>
-        <div class="facilities-grid">
-            <div class="facility-item">Free Wifi</div>
-            <div class="facility-item">Family Rooms</div>
-            <div class="facility-item">Non-smoking Rooms</div>
-            <div class="facility-item">Restaurant & Bar</div>
-            <div class="facility-item">Facilities for Disabled Guests</div>
-            <div class="facility-item">24-hour Front Desk</div>
-            <div class="facility-item">Room Service</div>
-            <div class="facility-item">Elevator</div>
-            <div class="facility-item">Tea/Coffee Maker</div>
-            <div class="facility-item">Exceptional Breakfast</div>
-        </div>
-    </section>
-
-    <div class="bg-light">
-        <div class="content-wrapper">
-            <div class="section-title-container">
-                <h2>Explore the City</h2>
-            </div>
-            <div class="grid-2">
-                <div class="text-block">
-                    <ul class="location-list">
-                        <li><strong>Lille-Flandres Station:</strong> 853 feet</li>
-                        <li><strong>Opera:</strong> 1148 feet</li>
-                        <li><strong>Nouveau Siecle Convention Center:</strong> 1476 feet</li>
-                        <li><strong>Lille-Europe Station:</strong> 2133 feet</li>
-                        <li><strong>Lille Grand Palais:</strong> 1.2 mi</li>
-                        <li><strong>Lille Citadelle:</strong> 20-minute walk</li>
-                        <li><strong>Pierre Mauroy Stadium:</strong> 18-minute drive</li>
-                    </ul>
-                    <p style="margin-top:20px; font-size: 0.8rem; color: #888;">Distance in property description is calculated using © OpenStreetMap</p>
-                </div>
-                <div>
-                    <img src="https://images.unsplash.com/photo-1524661135-423995f22d0b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" alt="City View" class="rounded">
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <footer id="contact">
-        <h3>Boa Hotel</h3>
-        <p>BW Signature Collection - Lille Centre Gares</p>
-        <p>Public parking is available nearby.</p>
+    <footer>
+        <h3>Hôtel UP Lille</h3>
+        <p>Centre Gares</p>
         <br>
-        <a href="#" class="btn">Book Now</a>
+        <a href="https://www.booking.com/hotel/fr/up.html?aid=2402550" target="_blank" class="btn">Réserver Votre Séjour</a>
         <br><br>
-        <p>&copy; 2024 Boa Hotel Lille. All rights reserved.</p>
+        <p style="font-size: 0.8rem;">&copy; 2024 Hôtel UP. Site vitrine non officiel.</p>
     </footer>
 
 </body>
